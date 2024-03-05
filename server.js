@@ -11,6 +11,7 @@ const app = express();
 const cors = require('cors');
 
 const plantRoutes = require('./routes/plantRoutes');
+const newsRoutes = require('./routes/newsRoutes');
 
 
 
@@ -20,6 +21,8 @@ app.use(cors());
 // ROUTES
 // Plant Routes
 app.use('/api/plants', plantRoutes);
+// Plant Routes
+app.use('/api/news', newsRoutes);
 
 // LISTENER
 app.listen(PORT, () => console.log(`listening on PORT ${PORT}`));
